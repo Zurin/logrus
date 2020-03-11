@@ -1,8 +1,9 @@
 package logrus_test
 
 import (
-	"github.com/sirupsen/logrus"
 	"os"
+
+	"github.com/Zurin/logrus"
 )
 
 type DefaultFieldHook struct {

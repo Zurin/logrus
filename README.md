@@ -1,4 +1,4 @@
-# Logrus <img src="http://i.imgur.com/hTeVwmJ.png" width="40" height="40" alt=":walrus:" class="emoji" title=":walrus:"/>&nbsp;[![Build Status](https://travis-ci.org/sirupsen/logrus.svg?branch=master)](https://travis-ci.org/sirupsen/logrus)&nbsp;[![GoDoc](https://godoc.org/github.com/sirupsen/logrus?status.svg)](https://godoc.org/github.com/sirupsen/logrus)
+# Logrus <img src="http://i.imgur.com/hTeVwmJ.png" width="40" height="40" alt=":walrus:" class="emoji" title=":walrus:"/>&nbsp;[![Build Status](https://travis-ci.org/sirupsen/logrus.svg?branch=master)](https://travis-ci.org/sirupsen/logrus)&nbsp;[![GoDoc](https://godoc.org/github.com/Zurin/logrus?status.svg)](https://godoc.org/github.com/Zurin/logrus)
 
 Logrus is a structured logger for Go (golang), completely API compatible with
 the standard library logger.
@@ -8,12 +8,12 @@ import Logrus as both upper- and lower-case. Due to the Go package environment,
 this caused issues in the community and we needed a standard. Some environments
 experienced problems with the upper-case variant, so the lower-case was decided.
 Everything using `logrus` will need to use the lower-case:
-`github.com/sirupsen/logrus`. Any package that isn't, should be changed.
+`github.com/Zurin/logrus`. Any package that isn't, should be changed.
 
 To fix Glide, see [these
-comments](https://github.com/sirupsen/logrus/issues/553#issuecomment-306591437).
+comments](https://github.com/Zurin/logrus/issues/553#issuecomment-306591437).
 For an in-depth explanation of the casing issue, see [this
-comment](https://github.com/sirupsen/logrus/issues/570#issuecomment-313933276).
+comment](https://github.com/Zurin/logrus/issues/570#issuecomment-313933276).
 
 **Are you interested in assisting in maintaining Logrus?** Currently I have a
 lot of obligations, and I am unable to provide Logrus with the maintainership it
@@ -94,7 +94,7 @@ go test -bench=.*CallerTracing
 
 The organization's name was changed to lower-case--and this will not be changed
 back. If you are getting import conflicts due to case sensitivity, please use
-the lower-case import: `github.com/sirupsen/logrus`.
+the lower-case import: `github.com/Zurin/logrus`.
 
 #### Example
 
@@ -104,7 +104,7 @@ The simplest way to use Logrus is simply the package-level exported logger:
 package main
 
 import (
-  log "github.com/sirupsen/logrus"
+  log "github.com/Zurin/logrus"
 )
 
 func main() {
@@ -115,7 +115,7 @@ func main() {
 ```
 
 Note that it's completely api-compatible with the stdlib logger, so you can
-replace your `log` imports everywhere with `log "github.com/sirupsen/logrus"`
+replace your `log` imports everywhere with `log "github.com/Zurin/logrus"`
 and you'll now have the flexibility of Logrus. You can customize it all you
 want:
 
@@ -124,7 +124,7 @@ package main
 
 import (
   "os"
-  log "github.com/sirupsen/logrus"
+  log "github.com/Zurin/logrus"
 )
 
 func init() {
@@ -175,7 +175,7 @@ package main
 
 import (
   "os"
-  "github.com/sirupsen/logrus"
+  "github.com/Zurin/logrus"
 )
 
 // Create a new instance of the logger. You can have any number of instances.
@@ -250,9 +250,9 @@ Logrus comes with [built-in hooks](hooks/). Add those, or your custom hook, in
 
 ```go
 import (
-  log "github.com/sirupsen/logrus"
+  log "github.com/Zurin/logrus"
   "gopkg.in/gemnasium/logrus-airbrake-hook.v2" // the package is named "airbrake"
-  logrus_syslog "github.com/sirupsen/logrus/hooks/syslog"
+  logrus_syslog "github.com/Zurin/logrus/hooks/syslog"
   "log/syslog"
 )
 
@@ -272,7 +272,7 @@ func init() {
 ```
 Note: Syslog hook also support connecting to local syslog (Ex. "/dev/log" or "/var/run/syslog" or "/var/run/log"). For the detail, please check the [syslog hook README](hooks/syslog/README.md).
 
-A list of currently known of service hook can be found in this wiki [page](https://github.com/sirupsen/logrus/wiki/Hooks)
+A list of currently known of service hook can be found in this wiki [page](https://github.com/Zurin/logrus/wiki/Hooks)
 
 
 #### Level logging
@@ -323,7 +323,7 @@ could do:
 
 ```go
 import (
-  log "github.com/sirupsen/logrus"
+  log "github.com/Zurin/logrus"
 )
 
 init() {
@@ -354,9 +354,9 @@ The built-in logging formatters are:
     [github.com/mattn/go-colorable](https://github.com/mattn/go-colorable).
   * When colors are enabled, levels are truncated to 4 characters by default. To disable
     truncation set the `DisableLevelTruncation` field to `true`.
-  * All options are listed in the [generated docs](https://godoc.org/github.com/sirupsen/logrus#TextFormatter).
+  * All options are listed in the [generated docs](https://godoc.org/github.com/Zurin/logrus#TextFormatter).
 * `logrus.JSONFormatter`. Logs fields as JSON.
-  * All options are listed in the [generated docs](https://godoc.org/github.com/sirupsen/logrus#JSONFormatter).
+  * All options are listed in the [generated docs](https://godoc.org/github.com/Zurin/logrus#JSONFormatter).
 
 Third party logging formatters:
 
@@ -442,8 +442,8 @@ Logrus has a built in facility for asserting the presence of log messages. This 
 
 ```go
 import(
-  "github.com/sirupsen/logrus"
-  "github.com/sirupsen/logrus/hooks/test"
+  "github.com/Zurin/logrus"
+  "github.com/Zurin/logrus/hooks/test"
   "github.com/stretchr/testify/assert"
   "testing"
 )
